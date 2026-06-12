@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLOG | NEWBIE QUEST</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+    :root {
+      --yellow: #F5C800;
+      --yellow-light: #FDE96B;
+      --yellow-dark: #C9A400;
+      --navy: #1A2340;
+      --navy-mid: #253060;
+      --red: #CC2222;
+      --white: #FAFAF5;
+      --gray: #E8E8E0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--white);
+      color: var(--navy);
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: var(--navy);
+      border-bottom: 4px solid var(--yellow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+
+    .site-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      color: var(--yellow);
+      letter-spacing: 0.08em;
+      text-decoration: none;
+    }
+
+    .site-logo span { color: var(--red); }
+
+    nav { display: flex; gap: 4px; }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 2px;
+      letter-spacing: 0.05em;
+      transition: background 0.15s;
+    }
+
+    nav a:hover, nav a.active {
+      background: var(--yellow);
+      color: var(--navy);
+    }
+
+    /* ===== PAGE TITLE ===== */
+    .page-header {
+      background: var(--navy);
+      padding: 32px 20px 28px;
+      border-bottom: 2px solid var(--navy-mid);
+    }
+
+    .page-header-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .page-header h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.2rem;
+      color: var(--yellow);
+      letter-spacing: 0.08em;
+    }
+
+    .page-header p {
+      color: rgba(250,250,245,0.5);
+      font-size: 0.78rem;
+      margin-top: 4px;
+    }
+
+    /* ===== BLOG ENTRIES ===== */
+    .blog-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 36px 20px 60px;
+    }
+
+    .entry {
+      display: flex;
+      gap: 20px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--gray);
+    }
+
+    .entry:last-child {
+      border-bottom: none;
+    }
+
+    .entry-date {
+      font-size: 0.78rem;
+      color: #999;
+      white-space: nowrap;
+      padding-top: 2px;
+      min-width: 88px;
+    }
+
+    .entry-text {
+      font-size: 0.9rem;
+      line-height: 1.85;
+      color: var(--navy);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--navy);
+      border-top: 4px solid var(--yellow);
+      padding: 28px 20px;
+      text-align: center;
+    }
+
+    footer .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    footer .footer-nav a {
+      color: rgba(250,250,245,0.55);
+      text-decoration: none;
+      font-size: 0.78rem;
+      transition: color 0.15s;
+    }
+
+    footer .footer-nav a:hover { color: var(--yellow); }
+
+    footer small {
+      color: rgba(250,250,245,0.35);
+      font-size: 0.72rem;
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { height: 50px; }
+      nav a { padding: 5px 8px; font-size: 0.72rem; }
+      .entry { flex-direction: column; gap: 4px; }
+      .entry-date { min-width: unset; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">NEWBIE<span>QUEST</span></a>
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="blog.html" class="active">BLOG</a>
+        <a href="ranking.html">RANKING</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="about.html">ABOUT</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE TITLE -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <h1>BLOG</h1>
+      <p>日々のゲーム記録・ひとりごと</p>
+    </div>
+  </div>
+
+  <!-- ENTRIES -->
+  <div class="blog-wrap">
+
+    <div class="entry">
+      <div class="entry-date">2025-01-01</div>
+      <div class="entry-text">日記内容をここに書く。</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-date">2025-01-01</div>
+      <div class="entry-text">日記内容をここに書く。</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-date">2025-01-01</div>
+      <div class="entry-text">日記内容をここに書く。</div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-nav">
+      <a href="index.html">HOME</a>
+      <a href="blog.html">BLOG</a>
+      <a href="ranking.html">RANKING</a>
+      <a href="gallery.html">GALLERY</a>
+      <a href="about.html">ABOUT</a>
+    </div>
+    <small>&copy; NEWBIE QUEST. All rights reserved.</small>
+  </footer>
+
+</body>
+</html>
